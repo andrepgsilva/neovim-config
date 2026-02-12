@@ -21,6 +21,7 @@ return {
           enabled = true,
           leave_dirs_open = false,
         },
+        source_selector = { winbar = true, statusline = false, },
       },
       buffers = { follow_current_file = { enable = true } },
     })
