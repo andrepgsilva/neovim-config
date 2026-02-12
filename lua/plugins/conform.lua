@@ -6,7 +6,7 @@ return {
     },
     formatters = {
       pint = {
-        command = '/vendor/bin/php',
+        command = './vendor/bin/pint',
         args = { "--quiet", "--" },
         stdin = false,
       },

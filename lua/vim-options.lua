@@ -5,6 +5,8 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set ignorecase")
 vim.cmd("set nosmartcase")
+vim.cmd("set autoread")
+vim.cmd("set updatetime=50")
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -25,6 +27,11 @@ vim.api.nvim_create_autocmd("WinEnter", {
     end, 120)
   end,
 })
+
+vim.keymap.set("n", "<leader>ff", function()
+  require("conform").format()
+  vim.cmd("checktime") -- force buffer reload immediately after formatting
+end, { desc = "Format file with Conform and reload" })
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "php",
