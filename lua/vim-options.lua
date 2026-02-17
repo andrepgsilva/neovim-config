@@ -28,10 +28,10 @@ vim.api.nvim_create_autocmd("WinEnter", {
   end,
 })
 
-vim.keymap.set("n", "<leader>ff", function()
-  require("conform").format()
-  vim.cmd("checktime") -- force buffer reload immediately after formatting
-end, { desc = "Format file with Conform and reload" })
+-- vim.keymap.set("n", "<leader>ff", function()
+--   require("conform").format()
+--   vim.cmd("checktime") -- force buffer reload immediately after formatting
+-- end, { desc = "Format file with Conform and reload" })
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "php",
