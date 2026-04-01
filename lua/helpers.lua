@@ -87,3 +87,8 @@ end
 
 vim.api.nvim_create_user_command("FloatMe", float_current_window, {})
 vim.keymap.set("n", " wf", ":FloatMe<CR>", { silent = true })
+
+-- Copy to clipboard shortcuts
+vim.keymap.set('n', ' yw', '"+yw')
+vim.keymap.set('n', " yw'", '"+y\'')
+vim.keymap.set('n', ' yw"', '"+y\"')
